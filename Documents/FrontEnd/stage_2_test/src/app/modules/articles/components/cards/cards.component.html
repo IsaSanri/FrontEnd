@@ -1,0 +1,49 @@
+<!-- <div class="card">
+  <div class="card_header">
+    <div class="card_subtitle">
+      <span>Title</span>
+      <span>Journal</span>
+    </div>
+    <div class="card_close">
+      x
+    </div>
+  </div>
+  <div class="card__image-container">
+    <img src="assets/image/plos_one.png" alt="">
+  </div>
+  <div class="card__abstract">
+fgsgdfgd
+  </div>
+  <div class="card_buttoms">
+    <button mat-flat-button>Edit</button>
+    <button mat-flat-button>Show abstract</button>
+    <button mat-flat-button>Cancel</button>
+  </div>
+</div>
+
+<br> -->
+
+<mat-card class="card">
+
+  <div class="card_header">
+    <div class="card_subtitle">
+      <mat-card-title>{{article.title}}</mat-card-title>
+      <mat-card-subtitle>Journal: {{article.journal}}</mat-card-subtitle>
+    </div>
+    <div class="card_close">
+      x
+    </div>
+  </div>
+
+  <mat-card-content class="card__image-container">
+    <img [src]="getImageSource()" alt="">
+    <span class="card__abstract">{{article.abstract}}</span>
+  </mat-card-content>
+
+  <mat-card-actions class="card_buttoms">
+    <button mat-flat-button>Edit</button>
+    <button mat-flat-button>Show abstract</button>
+    <button mat-flat-button>Cancel</button>
+  </mat-card-actions>
+
+</mat-card>

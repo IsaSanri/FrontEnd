@@ -1,0 +1,25 @@
+.card {
+  background: local;
+  color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0px;
+  max-width: 400px;
+  .card_header{
+    color:black;
+    display: flex;
+    flex-direction: row;
+  }
+  .card_subtitle{
+    color:black;
+    display: flex;
+    flex-direction: column;
+  }
+  .card_buttoms{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+}
