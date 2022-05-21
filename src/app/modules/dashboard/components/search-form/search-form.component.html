@@ -1,0 +1,30 @@
+<div class="form">
+  <form [formGroup]="filmForm" >
+    <mat-form-field appearance="fill">
+      <mat-label>Busqueda</mat-label>
+      <mat-select>
+        <mat-option value="one" type="text" formArrayName="movies">{{movies}}</mat-option>
+        <mat-option value="two" formArrayName="series">{{series}}</mat-option>
+        <mat-option value="three" formArrayName="episodes">{{episodes}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Busar por</mat-label>
+      <input matInput type="text" formControlName="nameField"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Año</mat-label>
+      <input matInput formControlName="yearField"/>
+    </mat-form-field>
+
+    <button mat-icon-button [disabled]="searching" (click)="searchFilm()">
+       {{ searching ? "Searching film..." : "Search Film" }}
+    </button>
+  </form>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
